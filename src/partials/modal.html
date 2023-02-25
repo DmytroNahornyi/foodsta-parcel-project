@@ -1,0 +1,57 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-modal-btn" type="button" data-modal-close data-modal-close-hero data-modal-close-offer>
+      <svg class="close-modal-btn__icon" width="24px" height="24px">
+        <use href="./images/symbol-defs.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+    <div class="modal__container">
+      <p class="modal__title">Order Form</p>
+      <form class="form" autocomplete="off">
+        <label class="form__title" for="name"
+          >Name
+          <input
+            class="form__input"
+            placeholder="Your Name"
+            type="text"
+            name="name"
+            id="name"
+            required
+            minlength="3"
+            maxlength="25"
+            required
+          />
+        </label>
+        <label class="form__title" for="phone"
+          >Phone number
+          <input
+            class="form__input"
+            placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            type="tel"
+            name="phone"
+            id="phone"
+            required
+            minlength="4"
+            maxlength="30"
+            required
+          />
+        </label>
+        <label class="form__title" for="mail"
+          >E-mail
+          <input
+            class="form__input"
+            placeholder="example@gmail.com"
+            type="email"
+            name="mail"
+            id="mail"
+            required
+            minlength="8"
+            maxlength="100"
+            required
+          />
+        </label>
+        <button class="form__button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>

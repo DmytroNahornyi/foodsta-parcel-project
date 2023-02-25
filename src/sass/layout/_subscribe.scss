@@ -1,0 +1,100 @@
+.subscribe {
+  padding-bottom: 60px;
+  margin-top: -43px;
+  @include tablet {
+    padding-bottom: 100px;
+    margin-top: -74px;
+  }
+  @include desktop {
+    padding-bottom: 64px;
+    margin-top: -71px;
+  }
+
+  &__container {
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    @media screen and (max-width: 767px) {
+      margin: 0 auto 17px auto;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      margin: 0 0 20 auto;
+    }
+
+    @include desktop {
+      max-width: none;
+    }
+  }
+
+  &__title {
+    @include fontSize(28px, 1.2);
+    @include tablet {
+      font-size: 42px;
+    }
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    @include fontSize(14px, 1.14);
+    @include tablet {
+      @include fontSize(16px, 1.5);
+      margin-bottom: 24px;
+    }
+    margin-bottom: 40px;
+  }
+}
+
+.subscribe-form {
+  @media screen and (max-width: 767px) {
+    align-items: flex-end;
+  }
+}
+
+.subscribe-form__input {
+  outline: transparent;
+  border: 0.854167px solid $primary-yellow-accent;
+  border-radius: 30px;
+  width: 100%;
+  height: 42px;
+  padding: 12px 11px;
+
+  @include tablet {
+    width: 394px;
+    margin-right: 22px;
+  }
+
+  @include desktop {
+    margin-right: 32px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  &:not(:placeholder-shown):valid {
+    border-color: $secondary-green-accent;
+  }
+
+  &:not(:placeholder-shown):invalid {
+    border-color: $error-color;
+  }
+
+  &::placeholder {
+    @include fontSize(12px, 1.5);
+    color: $placeholder-color;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}
